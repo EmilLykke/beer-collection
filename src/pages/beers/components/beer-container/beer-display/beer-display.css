@@ -1,0 +1,17 @@
+.single-beer-container{
+    padding: 25px;
+    margin: 25px;
+    border: 2px  solid black;
+    border-radius: 15px;
+    
+}
+.single-beer-container:hover{
+    cursor: pointer;
+}
+.beer-image{
+    width: 100%;
+    height: 200px;
+    background-position: center center!important;
+    background-repeat: no-repeat!important;
+    background-size: contain!important;
+}
