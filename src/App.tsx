@@ -5,6 +5,7 @@ import Navbar from "./pages/navbar/components/navbar-container";
 import Home from "./pages/home/components/home-container";
 import Beers from "./pages/beers/components/beer-container/beer-list";
 import JSONResult from "./common/beers/beers.json";
+import BeerDetails from "./pages/beers/components/beer-details";
 
 function App() {
   const [data, setData] = useState([]);
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/beers" element={<Beers data={data} />} />
+        <Route path="/beer/:id" element={<BeerDetails />} />
       </Routes>
     </Router>
   );
