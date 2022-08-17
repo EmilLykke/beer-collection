@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { BrowserRouter, useParams } from "react-router-dom";
 
 // Jeg er end med at impotere JSON filen på denne måde
@@ -19,14 +19,14 @@ import { BeerModel } from "../../models";
 import "./beer-details.css";
 import Button from "react-bootstrap/Button";
 import Collapse from "react-bootstrap/Collapse";
+import { BeersContext } from "../../../../App";
 
 export default function BeerDetails() {
   const params = useParams();
-
-  let sessionList = JSON.parse(localStorage.getItem("session") as string);
-
   const [open, setOpen] = useState(false);
-  let beer: BeerModel = sessionList.find(
+  let context = React.useContext(BeersContext);
+
+  let beer: BeerModel = context.find(
     (item: BeerModel) => item.id.toString() == params.id
   );
   const [data, setData] = useState<BeerModel>(beer);
