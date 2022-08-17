@@ -21,7 +21,7 @@
 
 .beer-detail-description-container{
     display: grid;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 0.5fr 2fr;
     width: 70%;
     min-width: 500px;
 }

@@ -10,6 +10,9 @@ import { BrowserRouter, useParams } from "react-router-dom";
 // så man hele tiden kan tilgår JSONResult
 // import JSONResult from "../../../../common/beers/beers.json";
 //
+// Jeg fandt en anden løsning hvor jeg brugte localStorage.
+// Jeg er ikke sikker på at den er optimal men det er den jeg går
+// med for nu
 
 // Denne BeerModel har jeg selv lavet ud fra api'ens response
 import { BeerModel } from "../../models";
@@ -17,11 +20,10 @@ import "./beer-details.css";
 import Button from "react-bootstrap/Button";
 import Collapse from "react-bootstrap/Collapse";
 
-export default function BeerDetails(props: any) {
+export default function BeerDetails() {
   const params = useParams();
-  // const list = JSON.parse(JSON.stringify(JSONResult));
 
-  const sessionList = JSON.parse(localStorage.getItem("session") as string);
+  let sessionList = JSON.parse(localStorage.getItem("session") as string);
 
   const [open, setOpen] = useState(false);
   let beer: BeerModel = sessionList.find(
