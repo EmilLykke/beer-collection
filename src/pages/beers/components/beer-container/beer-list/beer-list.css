@@ -2,5 +2,15 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: auto;
+
 }
 
+.beer-list a{
+    text-decoration: none;
+    color: black;
+}
+
+.beer-list a:hover{
+    text-decoration: underline;
+    color: black;
+}

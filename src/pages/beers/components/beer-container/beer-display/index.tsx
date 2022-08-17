@@ -9,14 +9,14 @@ export default function Beer(props: any) {
   };
 
   return (
-    <Link to={"/beer/" + props.data.id}>
-      <div className="single-beer-container">
+    <div className="single-beer-container">
+      <Link to={"/beer/" + props.data.id}>
         <div className="beer-image" style={beer_image_style}></div>
         <div className="beer-info">
           <div>Name: {props.data.name}</div>
           <div>First brewed: {props.data.first_brewed}</div>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 }
