@@ -12,8 +12,22 @@ export default function Beer(props: any) {
       <Link to={"/beer/" + props.data.id}>
         <div className="beer-image" style={beer_image_style}></div>
         <div className="beer-info">
-          <div>Name: {props.data.name}</div>
-          <div>First brewed: {props.data.first_brewed}</div>
+          <div>
+            <div>
+              <b>Name:</b> {props.data.name}
+            </div>
+            <div>
+              <b>Yeast:</b> {props.data.ingredients.yeast}
+            </div>
+          </div>
+          <div>
+            <div>
+              <b>ph:</b> {props.data.ph}
+            </div>
+            <div>
+              <b>First brewed:</b> {props.data.first_brewed}
+            </div>
+          </div>
         </div>
       </Link>
     </div>

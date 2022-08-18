@@ -7,11 +7,18 @@ export default class Beers extends React.Component {
   render() {
     return (
       <>
-        <h1>Welcome to the beer page</h1>
-        <Link to={"/addbeer"}>Add a Beer</Link>
-        <div className="beer-list">
-          <BeerList />
+        <div className="beer-list-header">
+          <h1>Welcome your beer collection</h1>
         </div>
+
+        <div className="beer-list-add-button">
+          <p>Add a beer: </p>
+          <Link className="btn btn-secondary" to={"/addbeer"}>
+            +
+          </Link>
+        </div>
+
+        <BeerList />
       </>
     );
   }

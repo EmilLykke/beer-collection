@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./navbar.css";
-import "bootstrap/dist/js/bootstrap";
+import { ReactComponent as BrandIcon } from "./beer.svg";
 
 export default function Navbar() {
   const location = useLocation();
@@ -24,12 +24,17 @@ export default function Navbar() {
   return (
     // Dette er en navbar template taget direkte fra bootstraps hjemmeside
     // Jeg har bare lavet links om så de passer på react-router-dom
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg navbar-light">
       <div className="container-fluid">
-        <Link className="navbar-brand " to="/">
-          {/* Dette billede er ikke mit bare et jeg har fundet på nettet */}
-          <img src="https://produits.bienmanger.com/34491-0w600h600_Corona_Extra_Mexican_Blonde_Beer.jpg" />
-        </Link>
+        <div className="navbar-brand-div">
+          <Link className="navbar-brand " to="/">
+            {/* Denne svg har jeg lavet ved at tage et billede fra
+              nettet og sat det ind i illustrator og har der konveteret
+              det til en svg
+            */}
+            <BrandIcon />
+          </Link>
+        </div>
         <button
           className="navbar-toggler"
           type="button"

@@ -6,3 +6,16 @@
     font-size:larger!important;
     font-weight: 500!important;
 }
+
+.navbar{
+    background-color: rgb(255, 183, 76);
+}
+
+.navbar-brand{
+    width: 50px;
+    height: 50px;
+}
+
+.navbar-brand-div{
+    padding: 0px 10px;
+}

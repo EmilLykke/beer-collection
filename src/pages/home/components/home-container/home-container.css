@@ -1,0 +1,60 @@
+.home-header{
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    color: white;
+
+}
+.home-header h1{
+   font-size: 70px;
+}
+
+.home-section{
+    height: 90vh;
+    background-repeat: no-repeat!important;
+    background:url("https://files.guidedanmark.org/files/475/280627_beer-cellar.jpg");
+    background-size: cover;
+    overflow: hidden!important;
+    
+}
+
+.home-options{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding:50px;
+}
+.home-options div{
+
+    padding:50px;
+}
+
+.home-option-div{
+    color:white;
+    width: fit-content;
+}
+
+.home-option-div .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 75px;
+    font-size: 24px;
+    font-weight: 500;
+    border: none;
+}
+
+.home-option-div .btn:hover{
+    background-color: rgb(53, 68, 231);
+    border: none;
+    color: white;
+}
+
+
+.home-option-div div{
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    padding: 5px;
+}
+

@@ -1,3 +1,38 @@
+.beer-list-header{
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    
+
+}
+.beer-list-header h1{
+   font-size: 70px;
+}
+
+.beer-list-add-button{
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px;
+}
+.beer-list-add-button p{
+    font-size: 32px;
+    margin: 0px;
+    
+}
+
+.beer-list-add-button .btn{
+    display: flex;
+    font-size: 32px;   
+    width: 50px;
+    height: 50px;
+    align-items:center;
+    
+}
+
+
 .beer-list{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -13,4 +48,12 @@
 .beer-list a:hover{
     text-decoration: underline;
     color: black;
+}
+
+
+.beer-list-sort-buttons{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    padding: 10px;
+    place-items: center;
 }
