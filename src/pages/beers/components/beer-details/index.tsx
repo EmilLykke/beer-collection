@@ -48,7 +48,10 @@ export default function BeerDetails() {
   return (
     <section className="beer-detail-section">
       <div className="beer-detail-container">
-        <div className="beer-detail-image" style={beer_image_style}></div>
+        <div className="beer-detail-image-div">
+          <div className="beer-detail-image" style={beer_image_style}></div>
+        </div>
+
         <div className="beer-detail-description-container">
           <div></div>
           <div className="beer-detail-description">
