@@ -105,7 +105,17 @@ export default class AddBeer extends React.Component<any, any> {
                   value={this.state.image_url}
                 />
               </div>
-
+              <div>
+                <label>Yeast:</label>
+                <br />
+                <input
+                  className="form-control"
+                  id="yeast"
+                  type="text"
+                  onChange={this.handleChange}
+                  value={this.state.ingredients.yeast}
+                />
+              </div>
               <div>
                 <label>ph:</label>
                 <br />
@@ -118,17 +128,6 @@ export default class AddBeer extends React.Component<any, any> {
                 />
               </div>
 
-              <div>
-                <label>Yeast:</label>
-                <br />
-                <input
-                  className="form-control"
-                  id="yeast"
-                  type="text"
-                  onChange={this.handleChange}
-                  value={this.state.ingredients.yeast}
-                />
-              </div>
               <div>
                 <label>Rating:</label>
                 <br />

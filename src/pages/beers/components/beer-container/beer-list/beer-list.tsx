@@ -87,15 +87,9 @@ export default function BeerList() {
       </div>
       <div className="beer-list">
         {sessionSorted.map((beer: any) => (
-          <Beer data={beer} />
+          <Beer key={beer.id} data={beer} />
         ))}
       </div>
     </>
   );
-}
-
-function sortByName(a: any, b: any) {
-  var uppercase_a = a.name.toUpperCase();
-  var uppercase_b = b.name.toUpperCase();
-  return uppercase_a > uppercase_b ? 1 : -1;
 }
