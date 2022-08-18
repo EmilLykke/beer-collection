@@ -1,5 +1,4 @@
-import { time } from "console";
-import React, { Component, useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { SessionSwitcher } from "../../../../App";
 import "./beer-add.css";

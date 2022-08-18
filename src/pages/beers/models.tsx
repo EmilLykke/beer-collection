@@ -1,12 +1,12 @@
-export interface BeerModel2 {
-  id: number;
-  name: string;
-  yeast: string;
-  malt: string;
-  first_brewed: Date;
-  description: string;
-  image_url: string;
-}
+// export interface BeerModel2 {
+//   id: number;
+//   name: string;
+//   yeast: string;
+//   malt: string;
+//   first_brewed: Date;
+//   description: string;
+//   image_url: string;
+// }
 
 export interface BeerModel {
   id: number;

@@ -61,6 +61,7 @@ export default function BeerList() {
   return (
     <>
       <div className="beer-list-sort-select">
+        {/* Denne svg har jeg fundet på nettet */}
         <SortIcon />
         <select
           id="select_sort"
