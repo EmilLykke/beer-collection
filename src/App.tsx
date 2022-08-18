@@ -34,6 +34,9 @@ function App() {
 }
 export default App;
 
+// Inspiration til hvordan man opdatere en context fra child compnents kommer her fra:
+// https://stackoverflow.com/questions/41030361/how-to-update-react-context-from-inside-a-child-component
+
 export const SessionSwitcher = (props: any) => {
   const { session, setSession } = useContext(BeersContext);
   let obj = props.data;

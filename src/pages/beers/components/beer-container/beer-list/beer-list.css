@@ -51,9 +51,17 @@
 }
 
 
-.beer-list-sort-buttons{
-    display: grid;
-    grid-template-columns: repeat(8,1fr);
-    padding: 10px;
+.beer-list-sort-select{
+    display: flex;
+    padding: 20px;
     place-items: center;
+}
+
+.beer-list-sort-select select{
+   margin-left: 25px;
+}
+
+.sort-icon{
+    width: 40px;
+    
 }
