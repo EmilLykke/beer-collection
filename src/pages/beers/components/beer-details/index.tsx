@@ -1,18 +1,5 @@
-import React, { useEffect, useMemo, useState } from "react";
-import { BrowserRouter, useParams } from "react-router-dom";
-
-// Jeg er end med at impotere JSON filen på denne måde
-// grunden til det er fordi jeg ikke kunne løse fejlen
-// som opstod når jeg kom ind på en side med et id i urlen
-// og jeg så refreshede. Når jeg refreshede fik jeg fejlen
-// med at jeg ikke kunne læse en property på undefined objekt.
-// Mit bud er at man skal bruge en eller anden form for context
-// så man hele tiden kan tilgår JSONResult
-// import JSONResult from "../../../../common/beers/beers.json";
-//
-// Jeg fandt en anden løsning hvor jeg brugte localStorage.
-// Jeg er ikke sikker på at den er optimal men det er den jeg går
-// med for nu
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 // Denne BeerModel har jeg selv lavet ud fra api'ens response
 import { BeerModel } from "../../models";
@@ -23,10 +10,9 @@ import { BeersContext } from "../../../../App";
 
 export default function BeerDetails() {
   const params = useParams();
-  const [open, setOpen] = useState(false);
   let context = React.useContext(BeersContext);
 
-  let beer: BeerModel = context.find(
+  let beer: BeerModel = context.session.find(
     (item: BeerModel) => item.id.toString() == params.id
   );
   const [data, setData] = useState<BeerModel>(beer);
@@ -39,6 +25,7 @@ export default function BeerDetails() {
     background: "url(" + url + ")",
   };
 
+  const [open, setOpen] = useState(false);
   return (
     <section className="beer-detail-section">
       <div className="beer-detail-container">

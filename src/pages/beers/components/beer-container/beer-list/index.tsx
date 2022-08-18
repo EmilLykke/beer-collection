@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./beer-list.css";
-import ContextConsumer from "./consumer";
+import BeerList from "./beer-list";
 
 export default class Beers extends React.Component {
   render() {
@@ -10,7 +10,7 @@ export default class Beers extends React.Component {
         <h1>Welcome to the beer page</h1>
         <Link to={"/addbeer"}>Add a Beer</Link>
         <div className="beer-list">
-          <ContextConsumer />
+          <BeerList />
         </div>
       </>
     );

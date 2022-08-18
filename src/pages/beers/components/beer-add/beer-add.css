@@ -1,0 +1,44 @@
+.add-beer-section{
+    width: 100%;
+    height: 85vh;
+    display: grid;
+    place-items: center;
+}
+
+
+.add-beer-form-div{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+}
+
+.add-beer-form{
+    width: 50%;
+    min-width: 331.5px;
+}
+
+
+
+.beer-form-3{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+}
+.beer-form-3 div{
+    padding: 10px;
+    
+}
+.beer-form-3 div input{
+    width:100%;
+    
+}
+
+.beer-form-description{
+    display: block;
+    padding: 10px;
+}
+
+.beer-form-description textarea{
+    width: 100%;
+}
