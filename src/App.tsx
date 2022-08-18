@@ -17,7 +17,7 @@ export const BeersContext: React.Context<any> = React.createContext({
 function App() {
   const [session, setSession] = useState(contextJSON);
   const value = { session, setSession };
-  let length = Object.keys(session).length;
+  const length = Object.keys(session).length;
   return (
     <Router>
       <Navbar />
