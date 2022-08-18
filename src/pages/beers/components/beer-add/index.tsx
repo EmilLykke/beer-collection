@@ -22,6 +22,7 @@ export default class AddBeer extends React.Component<any, any> {
       brewers_tips: "",
     };
     this.handleChange = this.handleChange.bind(this);
+
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -50,6 +51,9 @@ export default class AddBeer extends React.Component<any, any> {
   render() {
     return (
       <section className="add-beer-section">
+        <div className="add-beer-image">
+          <img src={this.state.image_url} />
+        </div>
         <div className="add-beer-form-div">
           <form className="add-beer-form" onSubmit={this.handleSubmit}>
             <div className="beer-form-3">
