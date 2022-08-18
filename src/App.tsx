@@ -17,7 +17,7 @@ export const BeersContext: React.Context<any> = React.createContext({
 function App() {
   const [session, setSession] = useState(contextJSON);
   const value = { session, setSession };
-
+  let length = Object.keys(session).length;
   return (
     <Router>
       <Navbar />
@@ -26,7 +26,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/beers" element={<Beers />} />
           <Route path="/beer/:id" element={<BeerDetails />} />
-          <Route path="/addbeer" element={<AddBeer data={value.session} />} />
+          <Route path="/addbeer" element={<AddBeer data={length} />} />
         </Routes>
       </BeersContext.Provider>
     </Router>

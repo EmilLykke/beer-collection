@@ -8,7 +8,7 @@ export default class AddBeer extends React.Component<any, any> {
     super(props);
 
     this.state = {
-      id: Object.keys(props.data).length + 1,
+      id: props.data + 1,
       name: "",
       tagline: "",
       first_brewed: "",
