@@ -97,7 +97,7 @@ export default function BeerDetails() {
                 aria-controls="brew-tips"
                 aria-expanded={open}
               >
-                V
+                &#9660;
               </Button>
             </div>
             <div className="beer-detail-description-brew-tips-collapse">
