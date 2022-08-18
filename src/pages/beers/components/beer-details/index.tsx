@@ -7,7 +7,6 @@ import "./beer-details.css";
 import Button from "react-bootstrap/Button";
 import Collapse from "react-bootstrap/Collapse";
 import { BeersContext } from "../../../../App";
-import { json } from "stream/consumers";
 
 export default function BeerDetails() {
   const params = useParams();
@@ -24,17 +23,19 @@ export default function BeerDetails() {
 
   useEffect(() => {
     setData({ ...beer, rating: rating });
-    setSession(arr);
+    setSession(newArr);
   }, [rating]);
 
-  const arr = session.map((obj: any) => {
+  // hvordan man opdataere arrayen med øl er fundet her:
+  // https://stackoverflow.com/questions/66667325/how-to-update-value-of-json-object-in-reactjs
+  const newArr = session.map((obj: any) => {
     if (obj.id == params.id) {
       return {
         ...obj,
         rating: rating,
       };
     }
-    //else return the object
+
     return { ...obj };
   });
 
