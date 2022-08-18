@@ -12,6 +12,7 @@ export default class AddBeer extends React.Component<any, any> {
       name: "",
       tagline: "",
       first_brewed: "",
+      rating: 0,
       description: "",
       image_url: "",
       ph: 0,
@@ -26,7 +27,7 @@ export default class AddBeer extends React.Component<any, any> {
   }
 
   handleChange(event: any) {
-    if (event.target.id == "ph") {
+    if (event.target.id == "ph" || event.target.id == "rating") {
       this.setState({
         ...this.state,
         [event.target.id]: parseFloat(event.target.value),
@@ -60,6 +61,7 @@ export default class AddBeer extends React.Component<any, any> {
                 <label>Name:</label>
                 <br />
                 <input
+                  className="form-control"
                   id="name"
                   type="text"
                   onChange={this.handleChange}
@@ -71,6 +73,7 @@ export default class AddBeer extends React.Component<any, any> {
                 <label>Tagline:</label>
                 <br />
                 <input
+                  className="form-control"
                   id="tagline"
                   type="text"
                   onChange={this.handleChange}
@@ -82,6 +85,7 @@ export default class AddBeer extends React.Component<any, any> {
                 <label>First brewed:</label>
                 <br />
                 <input
+                  className="form-control"
                   id="first_brewed"
                   type="text"
                   onChange={this.handleChange}
@@ -89,11 +93,12 @@ export default class AddBeer extends React.Component<any, any> {
                 />
               </div>
             </div>
-            <div className="beer-form-3">
+            <div className="beer-form-4">
               <div>
                 <label>Image url:</label>
                 <br />
                 <input
+                  className="form-control"
                   id="image_url"
                   type="text"
                   onChange={this.handleChange}
@@ -105,6 +110,7 @@ export default class AddBeer extends React.Component<any, any> {
                 <label>ph:</label>
                 <br />
                 <input
+                  className="form-control"
                   id="ph"
                   type="number"
                   onChange={this.handleChange}
@@ -116,10 +122,22 @@ export default class AddBeer extends React.Component<any, any> {
                 <label>Yeast:</label>
                 <br />
                 <input
+                  className="form-control"
                   id="yeast"
                   type="text"
                   onChange={this.handleChange}
                   value={this.state.ingredients.yeast}
+                />
+              </div>
+              <div>
+                <label>Rating:</label>
+                <br />
+                <input
+                  className="form-control"
+                  id="rating"
+                  type="number"
+                  onChange={this.handleChange}
+                  value={this.state.rating}
                 />
               </div>
             </div>
@@ -127,6 +145,7 @@ export default class AddBeer extends React.Component<any, any> {
               <label>Description:</label>
               <br />
               <textarea
+                className="form-control"
                 id="description"
                 onChange={this.handleChange}
                 value={this.state.description}
@@ -136,6 +155,7 @@ export default class AddBeer extends React.Component<any, any> {
             <div className="beer-form-description">
               <label>Brewers tips:</label>
               <textarea
+                className="form-control"
                 id="brewers_tips"
                 onChange={this.handleChange}
                 value={this.state.brewers_tips}

@@ -7,18 +7,36 @@ import "./beer-details.css";
 import Button from "react-bootstrap/Button";
 import Collapse from "react-bootstrap/Collapse";
 import { BeersContext } from "../../../../App";
+import { json } from "stream/consumers";
 
 export default function BeerDetails() {
   const params = useParams();
-  let context = React.useContext(BeersContext);
+  let { session, setSession } = React.useContext(BeersContext);
 
-  let beer: BeerModel = context.session.find(
+  let beer: BeerModel = session.find(
     (item: BeerModel) => item.id.toString() == params.id
   );
   const [data, setData] = useState<BeerModel>(beer);
+  const [rating, setRating] = useState(beer.rating ?? 0);
   useEffect(() => {
     setData(beer);
   }, []);
+
+  useEffect(() => {
+    setData({ ...beer, rating: rating });
+    setSession(arr);
+  }, [rating]);
+
+  const arr = session.map((obj: any) => {
+    if (obj.id == params.id) {
+      return {
+        ...obj,
+        rating: rating,
+      };
+    }
+    //else return the object
+    return { ...obj };
+  });
 
   let url = data.image_url;
   const beer_image_style = {
@@ -53,6 +71,23 @@ export default function BeerDetails() {
               <h2 className="fact-header">Description:</h2>
               <p>{data.description}</p>
             </div>
+            <div>
+              <h2 className="fact-header">Rating:</h2>
+              <p>{data.rating ?? ""}</p>
+            </div>
+            <div>
+              <h2 className="fact-header">Change Rating:</h2>
+              <input
+                type="number"
+                value={rating}
+                name="rating"
+                onChange={(e) => {
+                  setRating(parseFloat(e.target.value));
+                }}
+              />
+            </div>
+            <br />
+
             <div className="beer-detail-description-brew-tips-toggle">
               <h2 className="fact-header">Brewers tips:</h2>
               {/* Denne del med collapse er taget fra dette link https://react-bootstrap.github.io/utilities/transitions/ */}

@@ -15,6 +15,7 @@ export interface BeerModel {
   first_brewed: string;
   description: string;
   image_url: string;
+  rating: number;
   abv: number;
   ibu: number;
   target_fg: number;

@@ -22,6 +22,9 @@
     min-width: 331.5px;
 }
 
+.add-beer-form label{
+    font-weight: 500;
+}
 
 
 .beer-form-3{
@@ -37,6 +40,21 @@
     width:100%;
     
 }
+
+.beer-form-4{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+
+}
+.beer-form-4 div{
+    padding: 10px;
+    
+}
+.beer-form-4 div input{
+    width:100%;
+    
+}
+
 
 .beer-form-description{
     display: block;

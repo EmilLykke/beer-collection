@@ -27,6 +27,9 @@ export default function Beer(props: any) {
             <div>
               <b>First brewed:</b> {props.data.first_brewed}
             </div>
+            <div>
+              <b>Beer rating:</b> {props.data.rating ?? "No rating"}
+            </div>
           </div>
         </div>
       </Link>

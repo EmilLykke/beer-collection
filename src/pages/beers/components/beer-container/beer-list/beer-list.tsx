@@ -14,6 +14,10 @@ export default function BeerList() {
 
   const phDescending = [...session].sort((a, b) => b.ph - a.ph);
 
+  const ratingAscending = [...session].sort((a, b) => a.rating - b.rating);
+
+  const ratingDescending = [...session].sort((a, b) => b.rating - a.rating);
+
   const nameAscending = [...session].sort((a, b) =>
     a.name.toUpperCase() > b.name.toUpperCase() ? 1 : -1
   );
@@ -77,6 +81,8 @@ export default function BeerList() {
           <option value="yeastDescending">Yeast Z-A</option>
           <option value="first_brewedAscending">First Brewed &#129145;</option>
           <option value="first_brewedDescending">First Brewed &#129147;</option>
+          <option value="ratingAscending">Rating &#129145;</option>
+          <option value="ratingDescending">Rating &#129147;</option>
         </select>
       </div>
       <div className="beer-list">
